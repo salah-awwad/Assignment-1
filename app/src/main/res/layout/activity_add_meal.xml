@@ -1,0 +1,47 @@
+<!-- res/layout/activity_add_meal.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#1A1A1A">
+
+    <EditText
+        android:id="@+id/editMealName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Meal Name"
+        android:inputType="text"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#B0BEC5" />
+
+    <EditText
+        android:id="@+id/editMealIngredients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingredients (comma-separated)"
+        android:inputType="text"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#B0BEC5"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/editMealCalories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Calories"
+        android:inputType="number"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#B0BEC5"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/buttonAddMeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Meal"
+        android:backgroundTint="#FF5722"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>

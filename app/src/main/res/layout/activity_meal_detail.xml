@@ -1,0 +1,70 @@
+<!-- res/layout/activity_meal_detail.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A1A1A"
+    android:padding="16dp">
+
+    <!-- Meal Name Header -->
+    <TextView
+        android:id="@+id/textMealName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:layout_alignParentTop="true"
+        android:text="Meal Name"
+        android:textColor="#E53935"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"
+        android:textAllCaps="true" />
+
+    <!-- Ingredients Section -->
+    <LinearLayout
+        android:id="@+id/ingredientsSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textMealName"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/rounded_card_background"> <!-- Use a custom background -->
+
+        <TextView
+            android:id="@+id/ingredientsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingredients"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:id="@+id/textMealIngredients"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="• Ingredient 1\n• Ingredient 2\n• Ingredient 3"
+            android:textColor="#B0BEC5"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:fontFamily="sans-serif" />
+    </LinearLayout>
+
+    <!-- Calories Count -->
+    <TextView
+        android:id="@+id/textMealCalories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:text="500 Calories"
+        android:textColor="#4CAF50"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    android:fontFamily="sans-serif-condensed" />
+</RelativeLayout>

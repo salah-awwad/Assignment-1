@@ -1,0 +1,29 @@
+<!-- res/layout/meal_list_item.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@drawable/meal_item_background"
+    android:layout_margin="8dp">
+
+    <TextView
+        android:id="@+id/textMealName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meal Name"
+        android:textColor="#FFFFFF"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    android:fontFamily="sans-serif-medium" />
+
+    <TextView
+        android:id="@+id/textMealCalories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="500 Calories"
+        android:textColor="#FF5722"
+    android:textSize="14sp"
+    android:layout_marginTop="4dp"
+    android:fontFamily="sans-serif" />
+</LinearLayout>
