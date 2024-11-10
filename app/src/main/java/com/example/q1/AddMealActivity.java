@@ -27,7 +27,7 @@ public class AddMealActivity extends AppCompatActivity {
         editMealCalories = findViewById(R.id.editMealCalories);
         buttonAddMeal = findViewById(R.id.buttonAddMeal);
 
-        // Set click listener for the "Add Meal" button
+        
         buttonAddMeal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,20 +36,20 @@ public class AddMealActivity extends AppCompatActivity {
         });
     }
 
-    // Method to handle adding the meal
+    
     private void addMeal() {
-        // Get input values
+        
         String mealName = editMealName.getText().toString().trim();
         String ingredientsText = editMealIngredients.getText().toString().trim();
         String caloriesText = editMealCalories.getText().toString().trim();
 
-        // Validate input
+       
         if (mealName.isEmpty() || ingredientsText.isEmpty() || caloriesText.isEmpty()) {
             Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        // Parse ingredients and calories
+      
         List<String> ingredients = Arrays.asList(ingredientsText.split(","));
         int calories;
         try {
@@ -59,7 +59,7 @@ public class AddMealActivity extends AppCompatActivity {
             return;
         }
 
-        // Create an Intent to pass the new meal back to MealPlannerActivity
+        
         Intent resultIntent = new Intent();
         resultIntent.putExtra("mealName", mealName);
         resultIntent.putStringArrayListExtra("mealIngredients", new ArrayList<>(ingredients));
