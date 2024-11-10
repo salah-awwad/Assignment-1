@@ -37,7 +37,7 @@ public class Meal {
         this.calories = calories;
     }
 
-    // Override toString to return meal name
+    
     @Override
     public String toString() {
         return name;
