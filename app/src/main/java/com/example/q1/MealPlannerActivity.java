@@ -30,20 +30,20 @@ public class MealPlannerActivity extends AppCompatActivity {
         listViewMeals = findViewById(R.id.listViewMeals);
         fabAddMeal = findViewById(R.id.fabAddMeal);
 
-        // Initialize mock meal data
+        
         meals = DataProvider.getMockMeals();
 
-        // Set up ArrayAdapter with custom layout
+       
         adapter = new ArrayAdapter<>(this, R.layout.meal_list_item, R.id.textMealName, meals);
         listViewMeals.setAdapter(adapter);
 
-        // Set up item click listener to open MealDetailActivity with meal data
+        
         listViewMeals.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Meal selectedMeal = meals.get(position);
 
-                // Start MealDetailActivity with the selected meal's data
+               
                 Intent intent = new Intent(MealPlannerActivity.this, MealDetailActivity.class);
                 intent.putExtra("mealName", selectedMeal.getName());
                 intent.putStringArrayListExtra("mealIngredients", new ArrayList<>(selectedMeal.getIngredients()));
@@ -52,25 +52,25 @@ public class MealPlannerActivity extends AppCompatActivity {
             }
         });
 
-        // FAB click listener to add a new meal
+       
         fabAddMeal.setOnClickListener(v -> {
             Intent intent = new Intent(MealPlannerActivity.this, AddMealActivity.class);
             startActivityForResult(intent, REQUEST_CODE_ADD_MEAL);
         });
     }
 
-    // Handle the result from AddMealActivity
+    
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == REQUEST_CODE_ADD_MEAL && resultCode == RESULT_OK && data != null) {
-            // Retrieve the new meal data from the Intent
+           
             String mealName = data.getStringExtra("mealName");
             List<String> ingredients = data.getStringArrayListExtra("mealIngredients");
             int calories = data.getIntExtra("mealCalories", 0);
 
-            // Create a new Meal object and add it to the list
+        
             Meal newMeal = new Meal(mealName, ingredients, calories);
             meals.add(newMeal);
             adapter.notifyDataSetChanged();
