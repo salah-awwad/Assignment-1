@@ -21,13 +21,13 @@ public class MealDetailActivity extends AppCompatActivity {
         textMealIngredients = findViewById(R.id.textMealIngredients);
         textMealCalories = findViewById(R.id.textMealCalories);
 
-        // Get the data from the intent
+      
         Intent intent = getIntent();
         String mealName = intent.getStringExtra("mealName");
         List<String> ingredients = intent.getStringArrayListExtra("mealIngredients");
         int calories = intent.getIntExtra("mealCalories", 0);
 
-        // Set the data in the views
+
         textMealName.setText(mealName);
         textMealIngredients.setText("• " + String.join("\n• ", ingredients));
         textMealCalories.setText(calories + " Calories");
