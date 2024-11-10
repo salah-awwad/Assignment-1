@@ -3,7 +3,7 @@ package com.example.q1;
 public class Workout {
     private String type;
     private String intensity;
-    private int duration; // in minutes
+    private int duration;
 
     public Workout(String type, String intensity, int duration) {
         this.type = type;
